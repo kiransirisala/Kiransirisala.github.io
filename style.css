@@ -1,12 +1,11 @@
-body {
+    body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
     background: #0b0f1a;
     color: #e0f7ff;
-    overflow-x: hidden;
 }
 
-/* Animated background grid */
+/* Animated Grid Background */
 body::before {
     content: "";
     position: fixed;
@@ -51,17 +50,12 @@ nav a:hover {
 /* Hero */
 .hero {
     text-align: center;
-    padding: 120px 20px;
+    padding: 100px 20px;
 }
 
 .hero h1 {
-    font-size: 50px;
+    font-size: 42px;
     text-shadow: 0 0 20px #00f7ff;
-}
-
-.hero p {
-    font-size: 20px;
-    margin-top: 20px;
 }
 
 /* Cards */
@@ -81,15 +75,19 @@ nav a:hover {
 }
 
 /* Skills */
+.skill {
+    margin-bottom: 20px;
+}
+
 .skill-bar {
     background: #111;
     border-radius: 20px;
     overflow: hidden;
-    margin: 10px 0;
+    height: 12px;
 }
 
 .skill-fill {
-    height: 12px;
+    height: 100%;
     background: linear-gradient(90deg, #00f7ff, #0077ff);
     width: 0;
     transition: 2s;
@@ -98,7 +96,26 @@ nav a:hover {
 /* Footer */
 footer {
     text-align: center;
-    padding: 30px;
+    padding: 25px;
     background: #000;
     color: #00f7ff;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .card {
+        margin: 20px;
+        padding: 20px;
+    }
 }
