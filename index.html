@@ -1,142 +1,72 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Kiran Sirisala | AI-Driven Operations Innovator</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', sans-serif;
-            background: #f4f7fb;
-            color: #333;
-        }
-
-        .hero {
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-            color: white;
-            text-align: center;
-            padding: 80px 20px;
-        }
-
-        .hero h1 {
-            margin: 0;
-            font-size: 42px;
-        }
-
-        .hero p {
-            margin-top: 12px;
-            font-size: 18px;
-            opacity: 0.9;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 50px auto;
-            padding: 0 20px;
-        }
-
-        .card {
-            background: white;
-            padding: 30px;
-            margin-bottom: 30px;
-            border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-        }
-
-        h2 {
-            margin-top: 0;
-            color: #203a43;
-        }
-
-        ul {
-            padding-left: 20px;
-        }
-
-        .highlight {
-            color: #0077b6;
-            font-weight: bold;
-        }
-
-        .metrics {
-            font-size: 18px;
-            font-weight: bold;
-            color: #0a9396;
-        }
-
-        footer {
-            text-align: center;
-            padding: 25px;
-            background: #0f2027;
-            color: white;
-        }
-    </style>
+    <title>Kiran Sirisala | AI Command Center</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <div class="hero">
-        <h1>Kiran Sirisala</h1>
-        <p>AI-Driven Operations Innovator | Quality & Automation Specialist</p>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">AI Projects</a>
+    <a href="experience.html">Experience</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<div class="hero">
+    <h1>Kiran Sirisala</h1>
+    <p id="dynamicText"></p>
+</div>
+
+<div class="card">
+    <h2>AI Innovation Mission</h2>
+    <p>
+        Designing AI-powered automation systems that eliminate manual workflows 
+        and transform operational efficiency using Generative AI and intelligent agents.
+    </p>
+</div>
+
+<div class="card">
+    <h2>Core AI Skills</h2>
+
+    Python Automation
+    <div class="skill-bar">
+        <div class="skill-fill" data-width="85%"></div>
     </div>
 
-    <div class="container">
-
-        <div class="card">
-            <h2>Professional Profile</h2>
-            <p>
-                Quality & Operations Specialist with 7+ years of experience across global organizations.
-                Currently leading AI-powered workflow innovation initiatives, integrating Generative AI,
-                Python automation, and intelligent agents to transform manual operational processes.
-            </p>
-        </div>
-
-        <div class="card">
-            <h2>AI & Automation Impact</h2>
-            <ul>
-                <li>Developed Python automation reducing manual effort by <span class="metrics">30+ minutes daily</span>.</li>
-                <li>Designed macro-driven systems cutting downtime by <span class="metrics">40%</span>.</li>
-                <li>Built AI tools: <span class="highlight">SOP Mate</span> (SOP Query Chatbot) & <span class="highlight">Quiz Master</span> (AI Learning Generator).</li>
-                <li>Currently building <span class="highlight">AgentZ</span> – Generative AI-driven automation workflow replicating end-to-end manual operations.</li>
-                <li>Driving innovation discussions to scale AI adoption across operations domains.</li>
-            </ul>
-        </div>
-
-        <div class="card">
-            <h2>Core Competencies</h2>
-            <ul>
-                <li>Quality Auditing & KPI Monitoring</li>
-                <li>Root Cause Analysis & Process Optimization</li>
-                <li>Python Automation & Workflow Design</li>
-                <li>LLM Applications & Prompt Engineering</li>
-                <li>Stakeholder & Cross-Functional Collaboration</li>
-            </ul>
-        </div>
-
-        <div class="card">
-            <h2>Achievements</h2>
-            <ul>
-                <li>🏆 Best Quality Analyst (3x Recognition)</li>
-                <li>🚀 Reduced ramp-up time by 30% for 50+ associates</li>
-                <li>📈 Consistent 99%+ quality performance in global projects</li>
-                <li>⚙️ Selected for pilot projects & innovation initiatives</li>
-            </ul>
-        </div>
-
-        <div class="card">
-            <h2>Vision</h2>
-            <p>
-                My mission is to bridge Operations Excellence with Artificial Intelligence —
-                designing scalable AI solutions that eliminate repetitive tasks,
-                enhance quality frameworks, and drive measurable business impact.
-            </p>
-        </div>
-
+    Generative AI / LLM Applications
+    <div class="skill-bar">
+        <div class="skill-fill" data-width="80%"></div>
     </div>
 
-    <footer>
-        © 2026 Kiran Sirisala | AI-Driven Operational Transformation
-    </footer>
+    Workflow Automation Design
+    <div class="skill-bar">
+        <div class="skill-fill" data-width="90%"></div>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Kiran Sirisala | AI Transformation Architect
+</footer>
+
+<script src="script.js"></script>
+
+<script>
+const texts = [
+    "Building AI Agents That Replace Manual Workflows.",
+    "Transforming Operations Using Generative AI.",
+    "Architecting Intelligent Automation Systems.",
+    "Engineering AI-Driven Process Optimization."
+];
+
+let count = 0;
+setInterval(() => {
+    document.getElementById("dynamicText").innerText = texts[count];
+    count = (count + 1) % texts.length;
+}, 2500);
+</script>
 
 </body>
 </html>
