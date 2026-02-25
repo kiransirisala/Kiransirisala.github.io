@@ -1,11 +1,19 @@
-    body {
+/* ============================= */
+/* Global Styles */
+/* ============================= */
+
+body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
     background: #0b0f1a;
     color: #e0f7ff;
+    overflow-x: hidden;
 }
 
-/* Animated Grid Background */
+/* ============================= */
+/* Animated Neon Grid Background */
+/* ============================= */
+
 body::before {
     content: "";
     position: fixed;
@@ -24,13 +32,16 @@ body::before {
     to { transform: translate(-60px,-60px); }
 }
 
+/* ============================= */
 /* Navigation */
+/* ============================= */
+
 nav {
     display: flex;
     justify-content: center;
     gap: 40px;
     padding: 20px;
-    background: rgba(0,0,0,0.6);
+    background: rgba(0,0,0,0.7);
     backdrop-filter: blur(10px);
     position: sticky;
     top: 0;
@@ -40,14 +51,17 @@ nav a {
     text-decoration: none;
     color: #00f7ff;
     font-weight: bold;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 nav a:hover {
     text-shadow: 0 0 15px #00f7ff;
 }
 
-/* Hero */
+/* ============================= */
+/* Hero Section */
+/* ============================= */
+
 .hero {
     text-align: center;
     padding: 100px 20px;
@@ -58,7 +72,15 @@ nav a:hover {
     text-shadow: 0 0 20px #00f7ff;
 }
 
-/* Cards */
+.hero p {
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+/* ============================= */
+/* Card Sections */
+/* ============================= */
+
 .card {
     max-width: 900px;
     margin: 40px auto;
@@ -67,16 +89,24 @@ nav a:hover {
     border-radius: 15px;
     backdrop-filter: blur(10px);
     box-shadow: 0 0 25px rgba(0,255,255,0.1);
-    transition: 0.4s;
+    transition: 0.4s ease;
 }
 
 .card:hover {
     box-shadow: 0 0 40px rgba(0,255,255,0.4);
 }
 
-/* Skills */
+/* ============================= */
+/* Skill Bars */
+/* ============================= */
+
 .skill {
     margin-bottom: 20px;
+}
+
+.skill span {
+    display: block;
+    margin-bottom: 5px;
 }
 
 .skill-bar {
@@ -90,10 +120,13 @@ nav a:hover {
     height: 100%;
     background: linear-gradient(90deg, #00f7ff, #0077ff);
     width: 0;
-    transition: 2s;
+    transition: 2s ease;
 }
 
+/* ============================= */
 /* Footer */
+/* ============================= */
+
 footer {
     text-align: center;
     padding: 25px;
@@ -101,7 +134,10 @@ footer {
     color: #00f7ff;
 }
 
-/* Mobile */
+/* ============================= */
+/* Mobile Responsive Section */
+/* ============================= */
+
 @media (max-width: 768px) {
 
     nav {
@@ -110,12 +146,25 @@ footer {
         text-align: center;
     }
 
+    .hero {
+        padding: 70px 20px;
+    }
+
     .hero h1 {
-        font-size: 30px;
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
     }
 
     .card {
         margin: 20px;
         padding: 20px;
     }
+
+    .skill-bar {
+        height: 10px;
+    }
+
 }
