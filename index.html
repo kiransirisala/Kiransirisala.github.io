@@ -2,71 +2,63 @@
 <html>
 <head>
     <title>Kiran Sirisala | AI Command Center</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="projects.html">AI Projects</a>
-    <a href="experience.html">Experience</a>
-    <a href="contact.html">Contact</a>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">AI Projects</a>
+    <a href="#">Experience</a>
+    <a href="#">Contact</a>
 </nav>
 
-<div class="hero">
+<section class="hero">
     <h1>Kiran Sirisala</h1>
     <p id="dynamicText"></p>
-</div>
+</section>
 
-<div class="card">
+<section class="card">
     <h2>AI Innovation Mission</h2>
     <p>
         Designing AI-powered automation systems that eliminate manual workflows 
         and transform operational efficiency using Generative AI and intelligent agents.
     </p>
-</div>
+</section>
 
-<div class="card">
+<section class="card">
     <h2>Core AI Skills</h2>
 
-    Python Automation
-    <div class="skill-bar">
-        <div class="skill-fill" data-width="85%"></div>
+    <div class="skill">
+        <span>Python Automation</span>
+        <div class="skill-bar">
+            <div class="skill-fill" data-width="85%"></div>
+        </div>
     </div>
 
-    Generative AI / LLM Applications
-    <div class="skill-bar">
-        <div class="skill-fill" data-width="80%"></div>
+    <div class="skill">
+        <span>Generative AI / LLM Applications</span>
+        <div class="skill-bar">
+            <div class="skill-fill" data-width="80%"></div>
+        </div>
     </div>
 
-    Workflow Automation Design
-    <div class="skill-bar">
-        <div class="skill-fill" data-width="90%"></div>
+    <div class="skill">
+        <span>Workflow Automation Design</span>
+        <div class="skill-bar">
+            <div class="skill-fill" data-width="90%"></div>
+        </div>
     </div>
 
-</div>
+</section>
 
 <footer>
     © 2026 Kiran Sirisala | AI Transformation Architect
 </footer>
 
 <script src="script.js"></script>
-
-<script>
-const texts = [
-    "Building AI Agents That Replace Manual Workflows.",
-    "Transforming Operations Using Generative AI.",
-    "Architecting Intelligent Automation Systems.",
-    "Engineering AI-Driven Process Optimization."
-];
-
-let count = 0;
-setInterval(() => {
-    document.getElementById("dynamicText").innerText = texts[count];
-    count = (count + 1) % texts.length;
-}, 2500);
-</script>
 
 </body>
 </html>
